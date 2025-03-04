@@ -44,9 +44,8 @@
                         <div class="min-md:w-1/4 shrink-0 max-w-60">
                             <div class="flex items-center justify-center">
                                 <picture class="aspect-square rounded-full object-cover overflow-hidden">
-                                    <source srcset="{{Vite::asset('resources/images/malc.webp')}}" type="image/webp">
-                                    <source srcset="{{Vite::asset('resources/images/malc.jpg')}}" type="image/jpeg">
-                                    <img src="{{Vite::asset('resources/images/malc.webp')}}" width="240" height="240" alt="Malcolm Rodrigues">
+                                    <source srcset="{{asset('images/malc.webp')}}" type="image/webp">
+                                    <img src="{{asset('images/malc.webp')}}" width="240" height="240" alt="Malcolm Rodrigues">
                                 </picture>
                             </div>
                         </div>
