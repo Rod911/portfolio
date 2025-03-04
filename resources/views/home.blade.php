@@ -27,9 +27,10 @@
                 <p class="text-xl">Web Developer</p>
                 <p class="text-sm mt-2">Passionate about creating elegant web solutions</p>
                 <div class="flex justify-center space-x-4 mt-4">
-                    <a href="https://github.com/Rod911" target="_blank" class=""><i data-lucide="github"></i></a>
-                    <a href="https://linkedin.com/in/rmalcolm911" target="_blank" class=""><i data-lucide="linkedin"></i></a>
-                    <a href="mailto:rmalcolm911@gmail.com" class=""><i data-lucide="mail"></i></a>
+                    <a href="https://github.com/Rod911" target="_blank" title="GitHub"><i data-lucide="github"></i><span class="sr-only">GitHub"></span></a>
+                    <a href="https://linkedin.com/in/rmalcolm911" target="_blank" title="LinkedIn"><i data-lucide="linkedin"></i><span class="sr-only">LinkedIn</span></a>
+                    <a href="mailto:rmalcolm911@gmail.com" title="Email"><i data-lucide="mail"></i><span class="sr-only">Email</span></a>
+                    <a href="{{asset('docs/Malcolm-Resume.pdf')}}" title="Resume"><i data-lucide="file-text"></i><span class="sr-only">Resume</span></a>
                 </div>
             </header>
 
