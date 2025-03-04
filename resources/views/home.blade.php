@@ -3,14 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Malcolm's Portfolio</title>
+    <meta name="description" content="Malcolm Rodrigues' Portfolio">
+    <meta name="author" content="Malcolm Rodrigues">
+    <meta name="theme-color" content="" id="meta-theme-color">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
 
     @vite('resources/css/app.css')
     <!-- favicon -->
@@ -40,7 +42,13 @@
                 <section id="about-section" class="fade-in">
                     <div class="flex gap-8 items-start max-md:flex-col max-md:items-center max-md:text-center">
                         <div class="min-md:w-1/4 shrink-0 max-w-60">
-                            <div class="flex items-center justify-center"><img src="{{asset('images/malc.webp')}}" alt="Profile Image" width="400" height="400" class="aspect-square rounded-full object-cover"></div>
+                            <div class="flex items-center justify-center">
+                                <picture class="aspect-square rounded-full object-cover overflow-hidden">
+                                    <source srcset="{{Vite::asset('resources/images/malc.webp')}}" type="image/webp">
+                                    <source srcset="{{Vite::asset('resources/images/malc.jpg')}}" type="image/jpeg">
+                                    <img src="{{Vite::asset('resources/images/malc.webp')}}" width="240" height="240" alt="Malcolm Rodrigues">
+                                </picture>
+                            </div>
                         </div>
                         <div class="min-md:w-3/4">
                             <h2 class="text-2xl font-semibold mb-4 flex gap-3 items-center max-md:justify-center"><i data-lucide="user"></i> About Me</h2>
@@ -204,11 +212,19 @@
     <div id="mouse-follower" class="pointer-events-none fixed inset-0 -z-1 blur" style="background-image: radial-gradient(600px at 50% 50%, color-mix(in oklab, var(--color-primary-600) 20%, transparent), transparent 80%);"></div>
 
     <!-- theme toggler -->
-    <button id="theme-toggle" class="fixed bottom-4 right-4 bg-primary-400/30 dark:bg-primary-600/30 dark:text-gray-100 transition-background duration-300 p-2 rounded-full cursor-pointer"><i data-lucide="moon" class="dark:hidden"></i><i data-lucide="sun" class="hidden dark:inline"></i></button>
+    <button id="theme-toggle" class="fixed bottom-4 right-4 bg-primary-400/30 dark:bg-primary-600/30 dark:text-gray-100 transition-background duration-300 p-2 rounded-full cursor-pointer" aria-label="Toggle dark mode"><i data-lucide="moon" class="dark:hidden"></i><i data-lucide="sun" class="hidden dark:inline"></i></button>
 
+    <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         // lucide init
         lucide.createIcons();
+
+        // set meta theme color
+        const rootStyles = getComputedStyle(document.documentElement);
+        const metaThemeColor = document.getElementById('meta-theme-color');
+        const primaryColor = rootStyles.getPropertyValue('--color-primary').trim();
+        metaThemeColor.setAttribute('content', primaryColor);
+
 
         // theme toggler
         const themeToggle = document.getElementById('theme-toggle');
