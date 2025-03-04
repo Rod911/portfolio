@@ -2,6 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "tailwindcss";
+@source "../views";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --color-primary: #7440b6;
+    --color-primary-rgb: 116, 64, 182;
+    --color-primary-contrast: #ffffff;
+    --color-primary-contrast-rgb: 255, 255, 255;
+
+    --color-primary-50: #f5f3ff;
+    --color-primary-100: #e3e0ff;
+    --color-primary-200: #c9c2ff;
+    --color-primary-300: #a79fff;
+    --color-primary-400: #8c7fff;
+    --color-primary-500: #7440b6;
+    --color-primary-600: #5e3aa7;
+    --color-primary-700: #493c98;
+    --color-primary-800: #362889;
+    --color-primary-900: #211d7a;
+}
+
 html {
     font-family: "M PLUS 1 Code", monospace;
+}
+
+@layer components {
+    .card {
+        @apply bg-primary-400/10 dark:bg-primary-600/20 text-gray-800 dark:text-gray-200 p-4 rounded-lg transition-background duration-300 ease-in-out;
+        &:hover {
+            @apply bg-primary-200/40 dark:bg-primary-600/30 shadow-[inset_0_-2px_2px_0_rgba(0,0,0,0.05)] dark:shadow-[inset_0_2px_2px_0_rgba(255,255,255,0.05)];
+        }
+        .subtitle {
+            @apply text-gray-600 dark:text-gray-400 transition duration-300 ease-in-out;
+        }
+    }
+
+    .badge {
+        @apply bg-primary-100 text-primary-800 dark:bg-primary-600 dark:text-primary-100 text-sm px-2 py-1 rounded transition duration-300 ease-in-out;
+    }
 }

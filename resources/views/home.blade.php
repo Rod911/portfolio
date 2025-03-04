@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
 
     @vite('resources/css/app.css')
     <!-- favicon -->
@@ -17,199 +18,248 @@
     <link rel="icon" type="image/png" sizes="64x64" href="{{asset('images/favicon-lg.png')}}">
 </head>
 
-<body class="dark:bg-gray-900 text-white">
-    <div>
-        <header class="sticky top-0 z-50 bg-white shadow-md dark:bg-gray-950">
-            <nav class="container flex items-center justify-center py-8 px-4 md:px-6 mx-auto">
-                <div class="flex items-center space-x-8 text-lg font-semibold text-white dark:text-gray-300">
-                    <a href="#about" class="">
-                        About
-                    </a>
-                    <a href="#projects" class="">
-                        Projects
-                    </a>
-                    <a href="#work" class="">
-                        Experience
-                    </a>
-                    <a href="#contact" class="">
-                        Contact
-                    </a>
+<body class="bg-white dark:bg-gray-900 transition-background duration-600">
+    <div class="min-h-screen container mx-auto max-w-4xl p-4 md:p-8">
+        <div class="bg-white/50 dark:bg-gray-800/50 text-gray-700 dark:text-gray-300 transition-background duration-300 shadow-lg rounded-lg overflow-hidden backdrop-blur-lg">
+            <!-- Header -->
+            <header class="bg-primary text-primary-contrast p-6 text-center">
+                <h1 class="text-4xl font-bold mb-2">Malcolm Rodrigues</h1>
+                <p class="text-xl">Web Developer</p>
+                <p class="text-sm mt-2">Passionate about creating elegant web solutions</p>
+                <div class="flex justify-center space-x-4 mt-4">
+                    <a href="https://github.com/Rod911" target="_blank" class=""><i data-lucide="github"></i></a>
+                    <a href="https://linkedin.com/in/rmalcolm911" target="_blank" class=""><i data-lucide="linkedin"></i></a>
+                    <a href="mailto:rmalcolm911@gmail.com" class=""><i data-lucide="mail"></i></a>
                 </div>
-            </nav>
-        </header>
-        <header class="w-full py-24 md:py-32 lg:py-48 bg-cover bg-center bg-no-repeat">
-            <div class="container flex flex-col items-center justify-center gap-2 px-4 text-center md:gap-4 md:px-6 mx-auto">
-                <div class="space-y-2">
-                    <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                        Malcolm Rodrigues
-                    </h1>
-                    <p class="text-gray-500 dark:text-gray-400 text-2xl">
-                        Web Developer
-                    </p>
-                </div>
-                <div class="mx-auto max-w-3xl">
-                    <p class="text-gray-500 md:text-xl/relaxed xl:text-base/relaxed dark:text-gray-400">
-                        Passionate about creating elegant web solutions.
-                    </p>
-                </div>
-            </div>
-        </header>
-        <section class="w-full py-12 md:py-24 lg:py-32" id="about">
-            <div class="container space-y-4 lg:col-start-2 lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4 px-4 md:px-6 mx-auto">
-                <div class="flex items-center justify-center"><img src="{{asset('images/malc.webp')}}" alt="Profile Image" width="400" height="400" class="aspect-square rounded-full object-cover"></div>
-                <div class="space-y-4">
-                    <div class="space-y-2">
-                        <h2 class="text-2xl font-bold tracking-tighter sm:text-3xl">
-                            About Me
-                        </h2>
-                        <p class="text-gray-500 md:text-xl/relaxed xl:text-base/relaxed dark:text-gray-400">
-                            Hi, I am Malcolm Rodrigues, I’m a seasoned web developer with a passion for creating innovative online experiences. With over 4 years of experience in the industry, I have honed my skills across various programming languages, front-end and back-end technologies, and have successfully contributed to a range of web development projects.
-                        </p>
+            </header>
+
+            <!-- Content Sections -->
+            <main class="p-6 space-y-10">
+                <!-- About Section -->
+                <section id="about-section" class="fade-in">
+                    <div class="flex gap-8 items-start max-md:flex-col max-md:items-center max-md:text-center">
+                        <div class="min-md:w-1/4 shrink-0 max-w-60">
+                            <div class="flex items-center justify-center"><img src="{{asset('images/malc.webp')}}" alt="Profile Image" width="400" height="400" class="aspect-square rounded-full object-cover"></div>
+                        </div>
+                        <div class="min-md:w-3/4">
+                            <h2 class="text-2xl font-semibold mb-4 flex gap-3 items-center max-md:justify-center"><i data-lucide="user"></i> About Me</h2>
+                            <p class="">Hi, I am Malcolm Rodrigues, I'm a seasoned web developer with a passion for creating innovative online experiences. With over 4 years of experience in the industry, I have honed my skills across various programming languages, front-end and back-end technologies, and have successfully contributed to a range of web development projects.</p>
+                            <div class="card mt-4">
+                                <h3 class="text-xl font-semibold mb-2">Industry Knowledge</h3>
+                                <ul class="list-disc list-inside text-left">
+                                    <li>Web applications</li>
+                                    <li>Front-end design and development</li>
+                                    <li>Responsive web design</li>
+                                    <li>Back-end and API development</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="space-y-2">
-                        <h3 class="text-lg font-bold tracking-tight">
-                            Skills
-                        </h3>
-                        <p class="text-gray-500 dark:text-gray-400">
-                            JavaScript, PHP, Python, Java, HTML5/CSS, MySQL, Firebase, MongoDB, React.js, Node.js, Next.js, JSON, Rest API, CodeIgniter, Laravel
-                        </p>
+                </section>
+
+                <!-- Skills Section -->
+                <section id="skills-section" class="fade-in">
+                    <h2 class="text-2xl font-semibold mb-4 flex gap-3 items-center"><i data-lucide="cpu"></i> Skills</h2>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="fade-in">
+                            <div class="card">
+                                <h3 class="text-xl font-semibold mb-3">Languages</h3>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="badge">JavaScript</span>
+                                    <span class="badge">PHP</span>
+                                    <span class="badge">Python</span>
+                                    <span class="badge">Java</span>
+                                    <span class="badge">HTML5/CSS</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fade-in">
+                            <div class="card">
+                                <h3 class="text-xl font-semibold mb-3">Databases</h3>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="badge">MySQL</span>
+                                    <span class="badge">SQLite</span>
+                                    <span class="badge">Firebase</span>
+                                    <span class="badge">MongoDB</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fade-in">
+                            <div class="card">
+                                <h3 class="text-xl font-semibold mb-3">Frameworks</h3>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="badge">React.js</span>
+                                    <span class="badge">Node.js</span>
+                                    <span class="badge">Next.js</span>
+                                    <span class="badge">CodeIgniter</span>
+                                    <span class="badge">Laravel</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="space-y-2">
-                        <h3 class="text-lg font-bold tracking-tight">
-                            Industry Knowledge
-                        </h3>
-                        <p class="text-gray-500 dark:text-gray-400">
-                            Web applications, front-end design and development, responsive web design, back-end and API development
-                        </p>
+                </section>
+
+                <!-- Projects Section -->
+                <section id="projects-section" class="fade-in">
+                    <h2 class="text-2xl font-semibold mb-4 flex gap-3 items-center"><i data-lucide="codepen"></i> My Projects</h2>
+                    <div class="space-y-4">
+                        <div class="fade-in">
+                            <div class="card">
+                                <h3 class="text-xl font-bold mb-2">Mangaluru Bus</h3>
+                                <p class="mb-3">Bus route search and mapping service for Mangalore city.</p>
+                                <div class="flex items-center gap-2">
+                                    <span class="badge">React.js</span>
+                                    <span class="badge">Laravel</span>
+                                    <span class="badge">SQLite</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fade-in">
+                            <div class="card">
+                                <h3 class="text-xl font-bold mb-2">Slides</h3>
+                                <p class="mb-3">Song slides manager to generate presentations for song lyrics.</p>
+                                <div class="flex items-center gap-2">
+                                    <span class="badge">React.js</span>
+                                    <span class="badge">CodeIgniter</span>
+                                    <span class="badge">MySQL</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fade-in">
+                            <div class="card">
+                                <h3 class="text-xl font-bold mb-2">Launcher Setups</h3>
+                                <p class="mb-3">Community gallery to share android launcher setups.</p>
+                                <div class="flex items-center gap-2">
+                                    <span class="badge">React.js</span>
+                                    <span class="badge">Firebase</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fade-in">
+                            <div class="card">
+                                <h3 class="text-xl font-bold mb-2">Glassia Billing</h3>
+                                <p class="mb-3">Billing system made for Glassia Solutions.</p>
+                                <div class="flex items-center gap-2">
+                                    <span class="badge">CodeIgniter</span>
+                                    <span class="badge">MySQL</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fade-in">
+                            <div class="card">
+                                <h3 class="text-xl font-bold mb-2">Admin CI</h3>
+                                <p class="mb-3">Custom admin panel generator.</p>
+                                <div class="flex items-center gap-2">
+                                    <span class="badge">PHP</span>
+                                    <span class="badge">CodeIgniter</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fade-in">
+                            <div class="card">
+                                <h3 class="text-xl font-bold mb-2">Video Sync</h3>
+                                <p class="mb-3">Play local video files in sync with your group.</p>
+                                <div class="flex items-center gap-2">
+                                    <span class="badge">React.js</span>
+                                    <span class="badge">WebRTC</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </section>
-        <section class="w-full py-12 md:py-24 lg:py-32" id="projects">
-            <div class="container gap-4 px-4 md:gap-8 md:px-6 mx-auto space-y-10 text-center">
-                <div class="space-y-4">
-                    <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                        My Projects
-                    </h2>
-                </div>
-                <div class="flex flex-wrap gap-x-16 gap-y-8 justify-center">
-                    <div class="space-y-2 w-1/4 p-6 border-solid border border-gray-500 rounded-xl">
-                        <h3 class="text-xl font-bold tracking-tight">Slides</h3>
-                        <p class="text-sm text-gray-500 dark:text-gray-400">Song slides manager to generate presentations for song lyrics.</p>
-                    </div>
-                    <div class="space-y-2 w-1/4 p-6 border-solid border border-gray-500 rounded-xl">
-                        <h3 class="text-xl font-bold tracking-tight">Launcher Setups</h3>
-                        <p class="text-sm text-gray-500 dark:text-gray-400">Community gallery to share android launcher setups.</p>
-                    </div>
-                    <div class="space-y-2 w-1/4 p-6 border-solid border border-gray-500 rounded-xl">
-                        <h3 class="text-xl font-bold tracking-tight">Glassia Billing</h3>
-                        <p class="text-sm text-gray-500 dark:text-gray-400">Billing system made for Glassia Solutions.</p>
-                    </div>
-                    <div class="space-y-2 w-1/4 p-6 border-solid border border-gray-500 rounded-xl">
-                        <h3 class="text-xl font-bold tracking-tight">Admin CI</h3>
-                        <p class="text-sm text-gray-500 dark:text-gray-400">Custom admin panel generator.</p>
-                    </div>
-                    <div class="space-y-2 w-1/4 p-6 border-solid border border-gray-500 rounded-xl">
-                        <h3 class="text-xl font-bold tracking-tight">Video Sync</h3>
-                        <p class="text-sm text-gray-500 dark:text-gray-400">Play local video files in sync with your group.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="w-full py-12 md:py-24 lg:py-32" id="work">
-            <div class="container grid items-start justify-center gap-4 px-4 md:gap-8 md:px-6 mx-auto space-y-4">
-                <div class="space-y-4 text-center">
-                    <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                        Work Experience
-                    </h2>
-                </div>
-                <div class="space-y-4">
-                    <div class="space-y-2">
-                        <h3 class="text-lg font-bold tracking-tight">
-                            STEED 26 SOLUTIONS — <span class="italic text-gray-400 font-medium">Web Developer</span>
-                        </h3>
-                        <p class="text-sm text-gray-500 dark:text-gray-400">
-                            September 2019 - PRESENT
-                        </p>
-                        <ul class="list-disc list-inside space-y-1">
-                            <li>Designed and built e-commerce websites for several clients.</li>
-                            <li>Built reusable web components for creating websites.</li>
-                            <li>Built back-end services and admin tools using PHP and frameworks like CodeIgniter, React.</li>
-                            <li>Handled migration, updation and maintenance of websites.</li>
-                            <li>Created APIs using CodeIgniter, Express.js.</li>
-                            <li>Integrated Razorpay & Cashfree for handling payments.</li>
+                </section>
+
+                <!-- Experience Section -->
+                <section id="experience-section" class="fade-in">
+                    <h2 class="text-2xl font-semibold mb-4 flex gap-3 items-center"><i data-lucide="briefcase"></i> Work Experience</h2>
+                    <div class="card">
+                        <h3 class="text-xl font-semibold">STEED 26 SOLUTIONS — Web Developer</h3>
+                        <p class="subtitle mb-3">September 2019 - December 2024</p>
+                        <ul class="list-disc list-outside pl-5 space-y-2">
+                            <li class="pl-2">Architected and deployed multiple e-commerce platforms, resulting in improved user engagement and increased sales conversion</li>
+                            <li class="pl-2">Developed reusable component libraries reducing significant development time</li>
+                            <li class="pl-2">Engineered robust REST APIs using CodeIgniter and Express.js for seamless client-server communication</li>
+                            <li class="pl-2">Implemented secure payment gateways (Razorpay, Cashfree, Stripe) with comprehensive transaction monitoring</li>
+                            <li class="pl-2">Built and maintained scalable content management systems and admin portals</li>
+                            <li class="pl-2">Led website migration projects ensuring data integrity with minimal downtime</li>
+                            <li class="pl-2">Optimized web applications for maximum speed and scalability</li>
                         </ul>
                     </div>
+                </section>
+            </main>
+
+            <!-- Footer -->
+            <footer class="bg-gray-200 dark:bg-gray-800/60 dark:text-gray-400 p-4 text-center transition-background duration-300">
+                <div class="flex justify-center gap-x-4 gap-y-1 mb-3 flex-wrap">
+                    <a href="mailto:rmalcolm911@gmail.com" class="hover:text-gray-300 transition-color duration-300">rmalcolm911@gmail.com</a>
+                    <a href="mailto:contact@rmalc911.in" class="hover:text-gray-300 transition-color duration-300">contact@rmalc911.in</a>
+                    <a href="tel:+917349228002" class="hover:text-gray-300 transition-color duration-300">+91 7349228002</a>
                 </div>
-            </div>
-        </section>
-        <section class="w-full py-12 md:py-24 lg:py-32" id="contact">
-            <div class="container grid items-start justify-center gap-4 px-4 text-center md:gap-8 md:px-6 mx-auto">
-                <div class="space-y-4 text-center">
-                    <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                        Contact Details
-                    </h2>
-                </div>
-                <div class="space-y-2 text-center">
-                    <div class="flex items-center justify-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
-                            <path d="M3 10C3 6.22876 3 4.34315 4.17157 3.17157C5.34315 2 7.22876 2 11 2H13C16.7712 2 18.6569 2 19.8284 3.17157C21 4.34315 21 6.22876 21 10V14C21 17.7712 21 19.6569 19.8284 20.8284C18.6569 22 16.7712 22 13 22H11C7.22876 22 5.34315 22 4.17157 20.8284C3 19.6569 3 17.7712 3 14V10Z" stroke-width="1.5" />
-                            <path d="M8 10H16" stroke-width="1.5" stroke-linecap="round" />
-                            <path d="M8 14H13" stroke-width="1.5" stroke-linecap="round" />
-                        </svg>
-                        <p>
-                            <a href="{{asset('docs/Malcolm-Resume.pdf')}}">Resume</a>
-                        </p>
-                    </div>
-                    <div class="flex items-center justify-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
-                            <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-                        </svg>
-                        <p>
-                            <a href="mailto:rmalcolm911@gmail.com">rmalcolm911@gmail.com</a>
-                        </p>
-                    </div>
-                    <div class="flex items-center justify-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
-                            <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-                        </svg>
-                        <p>
-                            <a href="mailto:contact@rmalc911.in">contact@rmalc911.in</a>
-                        </p>
-                    </div>
-                    <div class="flex items-center justify-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                        </svg>
-                        <p>
-                            <a href="tel:+91 7349228002">+91 7349228002</a>
-                        </p>
-                    </div>
-                    <div class="flex items-center justify-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
-                            <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
-                            <path d="M9 18c-4.51 2-5-2-7-2"></path>
-                        </svg>
-                        <p>
-                            <a href="https://github.com/Rod911" target="_blank" rel="noopener noreferrer">github.com/Rod911</a>
-                        </p>
-                    </div>
-                    <div class="flex items-center justify-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                            <rect width="4" height="12" x="2" y="9"></rect>
-                            <circle cx="4" cy="4" r="2"></circle>
-                        </svg>
-                        <p>
-                            <a href="https://www.linkedin.com/in/rmalcolm911" target="_blank" rel="noopener noreferrer">linkedin.com/in/rmalcolm911</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+                <p class="">© 2024 Malcolm Rodrigues. All Rights Reserved.</p>
+            </footer>
+        </div>
     </div>
+
+    <!-- mouse follower -->
+    <div id="mouse-follower" class="pointer-events-none fixed inset-0 -z-1 blur" style="background-image: radial-gradient(600px at 50% 50%, color-mix(in oklab, var(--color-primary-600) 20%, transparent), transparent 80%);"></div>
+
+    <!-- theme toggler -->
+    <button id="theme-toggle" class="fixed bottom-4 right-4 bg-primary-400/30 dark:bg-primary-600/30 dark:text-gray-100 transition-background duration-300 p-2 rounded-full cursor-pointer"><i data-lucide="moon" class="dark:hidden"></i><i data-lucide="sun" class="hidden dark:inline"></i></button>
+
+    <script>
+        // lucide init
+        lucide.createIcons();
+
+        // theme toggler
+        const themeToggle = document.getElementById('theme-toggle');
+        const theme = localStorage.getItem('theme');
+        if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+        } else if (theme === 'light') {
+            document.documentElement.classList.remove('dark');
+        }
+        themeToggle.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            if (document.documentElement.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // mouse follower
+        const mouseFollower = document.getElementById('mouse-follower');
+        const mousePos = {
+            x: 0,
+            y: 0
+        };
+        const mouseUpdate = () => {
+            mouseFollower.style.transform = `translate(calc(${mousePos.x}px - 50%), calc(${mousePos.y}px - 50%))`;
+        }
+        document.addEventListener('mousemove', (e) => {
+            mousePos.x = e.clientX;
+            mousePos.y = e.clientY;
+            requestAnimationFrame(mouseUpdate);
+        });
+
+        // fade in sections
+        const sections = document.querySelectorAll('.fade-in');
+        const options = {
+            rootMargin: '0px 0px -110px 0px'
+        };
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, options);
+        sections.forEach(section => {
+            observer.observe(section);
+            section.classList.add('opacity-0', 'transition', 'duration-1000', 'ease-in-out');
+        });
+    </script>
 </body>
 
 </html>
