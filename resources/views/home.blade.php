@@ -51,7 +51,7 @@
                         </div>
                         <div class="min-md:w-3/4">
                             <h2 class="text-2xl font-semibold mb-4 flex gap-3 items-center max-md:justify-center"><i data-lucide="user"></i> About Me</h2>
-                            <p class="">Hi, I am Malcolm Rodrigues, I'm a seasoned web developer with a passion for creating innovative online experiences. With over 4 years of experience in the industry, I have honed my skills across various programming languages, front-end and back-end technologies, and have successfully contributed to a range of web development projects.</p>
+                            <p class="">Hi, I’m a Full Stack Developer with 5+ years of experience specializing in web application development. Proven track record of delivering innovative solutions across e-commerce platforms and content management systems. Expertise in both front-end and back-end technologies with a focus on creating scalable, responsive web applications</p>
                             <div class="card mt-4">
                                 <h3 class="text-xl font-semibold mb-2">Industry Knowledge</h3>
                                 <ul class="list-disc list-inside text-left">
@@ -72,7 +72,7 @@
                         <div class="fade-in">
                             <div class="card">
                                 <h3 class="text-xl font-semibold mb-3">Languages</h3>
-                                <div class="flex flex-wrap gap-2">
+                                <div class="tools">
                                     <span class="badge">JavaScript</span>
                                     <span class="badge">PHP</span>
                                     <span class="badge">Python</span>
@@ -84,7 +84,7 @@
                         <div class="fade-in">
                             <div class="card">
                                 <h3 class="text-xl font-semibold mb-3">Databases</h3>
-                                <div class="flex flex-wrap gap-2">
+                                <div class="tools">
                                     <span class="badge">MySQL</span>
                                     <span class="badge">SQLite</span>
                                     <span class="badge">Firebase</span>
@@ -95,7 +95,7 @@
                         <div class="fade-in">
                             <div class="card">
                                 <h3 class="text-xl font-semibold mb-3">Frameworks</h3>
-                                <div class="flex flex-wrap gap-2">
+                                <div class="tools">
                                     <span class="badge">React.js</span>
                                     <span class="badge">Node.js</span>
                                     <span class="badge">Next.js</span>
@@ -114,8 +114,12 @@
                         <div class="fade-in">
                             <div class="card">
                                 <h3 class="text-xl font-bold mb-2">Mangaluru Bus</h3>
-                                <p class="mb-3">Bus route search and mapping service for Mangalore city.</p>
-                                <div class="flex items-center gap-2">
+                                <p class="description">Bus route search and mapping service for Mangalore city.</p>
+                                <div class="links">
+                                    <a href="https://mangaluru-bus.rmalc911.in/" target="_blank" class="card-link">mangaluru-bus.rmalc911.in</a>
+                                    <a href="https://github.com/Rod911/mangaluru-bus" target="_blank" class="card-link">github.com/Rod911/mangaluru-bus</a>
+                                </div>
+                                <div class="tools">
                                     <span class="badge">React.js</span>
                                     <span class="badge">Laravel</span>
                                     <span class="badge">SQLite</span>
@@ -125,8 +129,12 @@
                         <div class="fade-in">
                             <div class="card">
                                 <h3 class="text-xl font-bold mb-2">Slides</h3>
-                                <p class="mb-3">Song slides manager to generate presentations for song lyrics.</p>
-                                <div class="flex items-center gap-2">
+                                <p class="description">Song slides manager to generate presentations for song lyrics for local churches.</p>
+                                <div class="links">
+                                    <a href="https://slides.rmalc911.in/" target="_blank" class="card-link">slides.rmalc911.in</a>
+                                    <!-- <a href="https://github.com/Rod911/icc_slides_ci" target="_blank" class="card-link">github.com/Rod911/icc_slides_ci</a> -->
+                                </div>
+                                <div class="tools">
                                     <span class="badge">React.js</span>
                                     <span class="badge">CodeIgniter</span>
                                     <span class="badge">MySQL</span>
@@ -136,8 +144,11 @@
                         <div class="fade-in">
                             <div class="card">
                                 <h3 class="text-xl font-bold mb-2">Launcher Setups</h3>
-                                <p class="mb-3">Community gallery to share android launcher setups.</p>
-                                <div class="flex items-center gap-2">
+                                <p class="description">Community gallery to share android launcher setups.</p>
+                                <div class="links">
+                                    <a href="https://github.com/Rod911/launcher-setups" target="_blank" class="card-link">github.com/Rod911/launcher-setups</a>
+                                </div>
+                                <div class="tools">
                                     <span class="badge">React.js</span>
                                     <span class="badge">Firebase</span>
                                 </div>
@@ -146,8 +157,8 @@
                         <div class="fade-in">
                             <div class="card">
                                 <h3 class="text-xl font-bold mb-2">Glassia Billing</h3>
-                                <p class="mb-3">Billing system made for Glassia Solutions.</p>
-                                <div class="flex items-center gap-2">
+                                <p class="description">Billing system made for Glassia Solutions.</p>
+                                <div class="tools">
                                     <span class="badge">CodeIgniter</span>
                                     <span class="badge">MySQL</span>
                                 </div>
@@ -156,8 +167,11 @@
                         <div class="fade-in">
                             <div class="card">
                                 <h3 class="text-xl font-bold mb-2">Admin CI</h3>
-                                <p class="mb-3">Custom admin panel generator.</p>
-                                <div class="flex items-center gap-2">
+                                <p class="description">Custom admin panel generator.</p>
+                                <div class="links">
+                                    <a href="https://github.com/rmalc911/ci_init" target="_blank" class="card-link">github.com/rmalc911/ci_init</a>
+                                </div>
+                                <div class="tools">
                                     <span class="badge">PHP</span>
                                     <span class="badge">CodeIgniter</span>
                                 </div>
@@ -166,8 +180,12 @@
                         <div class="fade-in">
                             <div class="card">
                                 <h3 class="text-xl font-bold mb-2">Video Sync</h3>
-                                <p class="mb-3">Play local video files in sync with your group.</p>
-                                <div class="flex items-center gap-2">
+                                <p class="description">Play local video files in sync with your group.</p>
+                                <div class="links">
+                                    <a href="https://video-sync.onrender.com/" target="_blank" class="card-link">video-sync.onrender.com</a>
+                                    <a href="https://github.com/Rod911/video-sync" target="_blank" class="card-link">github.com/Rod911/video-sync</a>
+                                </div>
+                                <div class="tools">
                                     <span class="badge">React.js</span>
                                     <span class="badge">WebRTC</span>
                                 </div>
@@ -198,11 +216,11 @@
             <!-- Footer -->
             <footer class="bg-gray-200 dark:bg-gray-800/60 dark:text-gray-400 p-4 text-center transition-background duration-300">
                 <div class="flex justify-center gap-x-4 gap-y-1 mb-3 flex-wrap">
-                    <a href="mailto:rmalcolm911@gmail.com" class="hover:text-gray-300 transition-color duration-300">rmalcolm911@gmail.com</a>
-                    <a href="mailto:contact@rmalc911.in" class="hover:text-gray-300 transition-color duration-300">contact@rmalc911.in</a>
-                    <a href="tel:+917349228002" class="hover:text-gray-300 transition-color duration-300">+91 7349228002</a>
+                    <a href="mailto:rmalcolm911@gmail.com" class="footer-link">rmalcolm911@gmail.com</a>
+                    <a href="mailto:contact@rmalc911.in" class="footer-link">contact@rmalc911.in</a>
+                    <a href="tel:+917349228002" class="footer-link">+91 7349228002</a>
                 </div>
-                <p class="">© 2024 Malcolm Rodrigues. All Rights Reserved.</p>
+                <p class="">© 2025 Malcolm Rodrigues. All Rights Reserved.</p>
             </footer>
         </div>
     </div>
